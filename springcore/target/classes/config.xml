@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- using setter injection -->
+	
+<!-- 	this is out bean  (meta data)-->
+<!-- code is decoupled bcoz we can change value in xml file -->
+	<bean class="com.springcore.Student" name="student1">
+		<property name="studentId">  <!--  variable name -->
+			<value>101</value> <!-- set value of variable-->
+		</property>
+
+		<property name="studentName">
+			<value>Prashant Sail</value>
+		</property>
+
+		<property name="studentAddress">
+			<value>Mumbai</value>
+		</property>
+
+
+	</bean>
+</beans>
