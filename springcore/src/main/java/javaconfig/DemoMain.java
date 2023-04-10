@@ -1,0 +1,22 @@
+package com.springcore.javaconfig;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class DemoMain {
+	
+	public static void main(String[] args) {
+		//we use this for xml file 
+//		ApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/javaconfig/config.xml");
+	
+		
+		//now we are 
+		ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
+		Student student=  context.getBean("getStudent",Student.class);
+		System.out.println(student);
+		student.Study();
+		
+	}
+
+}
